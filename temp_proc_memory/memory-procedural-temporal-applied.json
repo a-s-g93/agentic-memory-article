@@ -1,0 +1,275 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "inline",
+    "detail-orientation": "horizontal",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": -389.7550000273736,
+        "y": -30.24159031951323
+      },
+      "caption": "",
+      "labels": [
+        "UserPrompt"
+      ],
+      "properties": {
+        "id": "up1",
+        "name": "Cypher Generation User Prompt"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 600.2411854606275,
+        "y": -30.24159031951323
+      },
+      "caption": "",
+      "labels": [
+        "SystemPrompt"
+      ],
+      "properties": {
+        "id": "sp1",
+        "name": "Cypher Generation Sys Prompt"
+      },
+      "style": {
+        "node-color": "#194d33",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 105.24309271662696,
+        "y": -30.24159031951323
+      },
+      "caption": "",
+      "labels": [
+        "UseCase"
+      ],
+      "properties": {
+        "id": "uc1",
+        "name": "Cypher Generation"
+      },
+      "style": {
+        "node-color": "#653294"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": -222.8822300959184,
+        "y": 220.8773146758293
+      },
+      "caption": "",
+      "style": {
+        "node-color": "#009ce0",
+        "outside-position": "left"
+      },
+      "labels": [
+        "UserPromptDetails"
+      ],
+      "properties": {
+        "id": "upd2",
+        "content": "<instructions>\\nPlease follow Neo4j best...",
+        "parameters": "[\"schema\", \"examples\", \"question\"]",
+        "version": "2",
+        "createDatetime": "02-15-2025T00:00.00"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 105.24309271662696,
+        "y": 220.8773146758292
+      },
+      "caption": "",
+      "style": {
+        "node-color": "#7b64ff"
+      },
+      "labels": [
+        "UseCaseDescription"
+      ],
+      "properties": {
+        "id": "str | key",
+        "description": "Generate a Cypher query to gather context",
+        "version": "1",
+        "createDatetime": "01-01-2024T00:00.00"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 455.2576180629626,
+        "y": 220.8773146758293
+      },
+      "caption": "",
+      "style": {
+        "node-color": "#68bc00",
+        "outside-position": "right"
+      },
+      "labels": [
+        "SystemPromptDetails"
+      ],
+      "properties": {
+        "id": "spd2",
+        "content": "You are a professional Graph Analyst...",
+        "version": "2",
+        "createDatetime": "02-01-2025T00:00.00"
+      }
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": -389.7550000273736,
+        "y": 471.99621967117184
+      },
+      "caption": "",
+      "style": {
+        "node-color": "#009ce0"
+      },
+      "labels": [
+        "UserPromptDetails"
+      ],
+      "properties": {
+        "id": "upd1",
+        "content": "<instructions>\\nPlease follow Neo4j best...",
+        "parameters": "[\"schema\", \"question\"]",
+        "version": "1",
+        "createDatetime": "01-15-2025T00:00.00"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 600.2411854606275,
+        "y": 471.99621967117184
+      },
+      "caption": "",
+      "style": {
+        "node-color": "#68bc00"
+      },
+      "labels": [
+        "SystemPromptDetails"
+      ],
+      "properties": {
+        "id": "spd1",
+        "content": "You are a Graph Analyst...",
+        "version": "1",
+        "createDatetime": "12-01-2024T00:00.00"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n2",
+      "toId": "n1",
+      "type": "HAS_SYSTEM_PROMPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n2",
+      "toId": "n0",
+      "type": "HAS_USER_PROMPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "type": "HAS_CURRENT_DETAILS",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n3"
+    },
+    {
+      "id": "n3",
+      "type": "HAS_CURRENT_DESCRIPTION",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n4"
+    },
+    {
+      "id": "n4",
+      "type": "HAS_CURRENT_DETAILS",
+      "style": {},
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n5"
+    },
+    {
+      "id": "n7",
+      "type": "PREVIOUS",
+      "style": {},
+      "properties": {},
+      "toId": "n8",
+      "fromId": "n3"
+    },
+    {
+      "id": "n8",
+      "type": "PREVIOUS",
+      "style": {},
+      "properties": {},
+      "fromId": "n5",
+      "toId": "n9"
+    }
+  ]
+}

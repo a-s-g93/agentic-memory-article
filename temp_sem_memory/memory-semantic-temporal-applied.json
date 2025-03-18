@@ -57,7 +57,7 @@
       "id": "n0",
       "position": {
         "x": 75,
-        "y": 252.31464987722507
+        "y": 82.53911158844764
       },
       "caption": "",
       "labels": [
@@ -66,19 +66,18 @@
       "properties": {
         "id": "a",
         "name": "Bob",
-        "age": "25",
-        "description": "loves animals and has many pets"
+        "birthday": "12/12/1999"
       },
       "style": {
         "node-color": "#aea1ff",
-        "outside-position": "bottom-left"
+        "outside-position": "top"
       }
     },
     {
       "id": "n1",
       "position": {
-        "x": 75,
-        "y": -7
+        "x": -226.95657241798773,
+        "y": 330.01807686217285
       },
       "caption": "",
       "labels": [
@@ -90,14 +89,14 @@
       },
       "style": {
         "node-color": "#aea1ff",
-        "outside-position": "left"
+        "outside-position": "right"
       }
     },
     {
       "id": "n2",
       "position": {
-        "x": 425.10896564333547,
-        "y": 381.97197481583754
+        "x": 376.95657241798773,
+        "y": 330.01807686217285
       },
       "caption": "",
       "labels": [
@@ -110,27 +109,70 @@
       },
       "style": {
         "node-color": "#16a5a5",
-        "outside-position": "bottom-right"
+        "outside-position": "bottom"
       }
     },
     {
-      "id": "n3",
+      "id": "n4",
       "position": {
-        "x": 75,
-        "y": 511.62929975445013
+        "x": 694.7836307691459,
+        "y": 82.53911158844744
       },
       "caption": "",
       "labels": [
-        "User"
+        "UserDescription"
       ],
       "properties": {
-        "id": "c",
-        "name": "Jim",
-        "age": "45"
+        "id": "ud3",
+        "description": "loves animals and has many pets",
+        "createDatetime": "03-01-2025T00:00.00",
+        "version": "3"
       },
       "style": {
-        "node-color": "#aea1ff",
-        "outside-position": "left"
+        "outside-position": "top-right",
+        "node-color": "#7b64ff"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 453.9399682068502,
+        "y": -158.3045509738483
+      },
+      "caption": "",
+      "labels": [
+        "UserDescription"
+      ],
+      "properties": {
+        "id": "ud2",
+        "description": "loves animals and has one pet",
+        "createDatetime": "02-15-2025T00:00.00",
+        "version": "2"
+      },
+      "style": {
+        "outside-position": "top-right",
+        "node-color": "#7b64ff"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 106.92409199661535,
+        "y": -274.9168945937396
+      },
+      "caption": "",
+      "labels": [
+        "UserDescription"
+      ],
+      "properties": {
+        "id": "ud1",
+        "description": "loves animals",
+        "createDatetime": "12-01-2024T00:00.00",
+        "version": "1"
+      },
+      "style": {
+        "outside-position": "top-right",
+        "node-color": "#7b64ff"
       }
     }
   ],
@@ -140,7 +182,11 @@
       "fromId": "n0",
       "toId": "n1",
       "type": "HAS_FRIEND",
-      "properties": {},
+      "properties": {
+        "startDatetime": "04-12-2005T00:00.00",
+        "endDatetime": "10-10-2024T00:00.00",
+        "active": "false"
+      },
       "style": {}
     },
     {
@@ -152,12 +198,28 @@
       "style": {}
     },
     {
-      "id": "n2",
-      "fromId": "n3",
-      "toId": "n2",
-      "type": "ATTENDED",
+      "id": "n3",
+      "fromId": "n0",
+      "toId": "n4",
+      "type": "HAS_CURRENT_DESCRIPTION",
       "properties": {},
       "style": {}
+    },
+    {
+      "id": "n4",
+      "type": "PREVIOUS",
+      "style": {},
+      "properties": {},
+      "toId": "n5",
+      "fromId": "n4"
+    },
+    {
+      "id": "n5",
+      "type": "PREVIOUS",
+      "style": {},
+      "properties": {},
+      "toId": "n6",
+      "fromId": "n5"
     }
   ]
 }

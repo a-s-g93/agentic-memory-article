@@ -56,32 +56,53 @@
     {
       "id": "n0",
       "position": {
-        "x": 75,
-        "y": 252.31464987722507
+        "x": -104.08557418512716,
+        "y": 130.56320471359754
       },
       "caption": "",
       "labels": [
-        "User"
+        "UserPrompt"
       ],
       "properties": {
         "id": "str | key",
         "name": "str",
-        "age": "int",
-        "description": "str"
+        "content": "str",
+        "parameters": "list<str>"
       },
       "style": {
-        "node-color": "#aea1ff"
+        "node-color": "#0062b1",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 579.8626875447831,
+        "y": 130.56320471359743
+      },
+      "caption": "",
+      "labels": [
+        "SystemPrompt"
+      ],
+      "properties": {
+        "id": "str | key",
+        "name": "str",
+        "content": "str"
+      },
+      "style": {
+        "node-color": "#194d33",
+        "outside-position": "bottom"
       }
     },
     {
       "id": "n2",
       "position": {
-        "x": 464.9361494606697,
-        "y": 252.31464987722507
+        "x": 237.8885566798279,
+        "y": -66.87565179717274
       },
       "caption": "",
       "labels": [
-        "Event"
+        "UseCase"
       ],
       "properties": {
         "id": "str | key",
@@ -89,31 +110,26 @@
         "description": "str"
       },
       "style": {
-        "node-color": "#16a5a5"
+        "node-color": "#653294"
       }
     }
   ],
   "relationships": [
     {
-      "id": "n1",
-      "fromId": "n0",
-      "toId": "n2",
-      "type": "ATTENDED",
+      "id": "n0",
+      "fromId": "n2",
+      "toId": "n1",
+      "type": "HAS_SYSTEM_PROMPT",
       "properties": {},
-      "style": {
-        "detail-orientation": "horizontal"
-      }
+      "style": {}
     },
     {
-      "id": "n2",
-      "type": "HAS_FRIEND",
-      "style": {
-        "attachment-start": "right",
-        "attachment-end": "bottom"
-      },
+      "id": "n1",
+      "fromId": "n2",
+      "toId": "n0",
+      "type": "HAS_USER_PROMPT",
       "properties": {},
-      "fromId": "n0",
-      "toId": "n0"
+      "style": {}
     }
   ]
 }

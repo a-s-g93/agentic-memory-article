@@ -56,8 +56,8 @@
     {
       "id": "n0",
       "position": {
-        "x": 75,
-        "y": 252.31464987722507
+        "x": 322.4789652737252,
+        "y": 50
       },
       "caption": "",
       "labels": [
@@ -66,18 +66,18 @@
       "properties": {
         "id": "str | key",
         "name": "str",
-        "age": "int",
-        "description": "str"
+        "birthday": "Date"
       },
       "style": {
-        "node-color": "#aea1ff"
+        "node-color": "#aea1ff",
+        "outside-position": "right"
       }
     },
     {
-      "id": "n2",
+      "id": "n1",
       "position": {
-        "x": 464.9361494606697,
-        "y": 252.31464987722507
+        "x": 569.9579305474504,
+        "y": 297.4789652737252
       },
       "caption": "",
       "labels": [
@@ -89,31 +89,76 @@
         "description": "str"
       },
       "style": {
-        "node-color": "#16a5a5"
+        "node-color": "#16a5a5",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 75,
+        "y": 297.4789652737252
+      },
+      "caption": "",
+      "labels": [
+        "UserDescription"
+      ],
+      "properties": {
+        "id": "str | key",
+        "description": "str",
+        "createDatetime": "datetime",
+        "version": "int"
+      },
+      "style": {
+        "node-color": "#7b64ff",
+        "outside-position": "bottom-right"
       }
     }
   ],
   "relationships": [
     {
-      "id": "n1",
+      "id": "n0",
       "fromId": "n0",
-      "toId": "n2",
+      "toId": "n1",
       "type": "ATTENDED",
       "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n0",
+      "toId": "n0",
+      "type": "HAS_FRIEND",
+      "properties": {
+        "startDatetime": "datetime",
+        "endDatetime": "datetime",
+        "active": "bool"
+      },
       "style": {
+        "attachment-start": "left",
+        "attachment-end": "top",
+        "detail-position": "above",
         "detail-orientation": "horizontal"
       }
     },
     {
       "id": "n2",
-      "type": "HAS_FRIEND",
+      "fromId": "n0",
+      "toId": "n2",
+      "type": "HAS_CURRENT_DESCRIPTION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "type": "PREVIOUS",
       "style": {
-        "attachment-start": "right",
-        "attachment-end": "bottom"
+        "attachment-start": "bottom",
+        "attachment-end": "left"
       },
       "properties": {},
-      "fromId": "n0",
-      "toId": "n0"
+      "fromId": "n2",
+      "toId": "n2"
     }
   ]
 }

@@ -56,64 +56,80 @@
     {
       "id": "n0",
       "position": {
-        "x": 75,
-        "y": 252.31464987722507
+        "x": -218.82482387498166,
+        "y": 293.82632627209546
       },
       "caption": "",
       "labels": [
-        "User"
+        "UserPrompt"
       ],
       "properties": {
-        "id": "str | key",
-        "name": "str",
-        "age": "int",
-        "description": "str"
+        "id": "up1",
+        "name": "Cypher Generation User Prompt",
+        "content": "<instructions>\\nPlease follow Neo4j best...",
+        "parameters": "[\"schema\", \"examples\", \"question\"]"
       },
       "style": {
-        "node-color": "#aea1ff"
+        "node-color": "#0062b1",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 429.3110093082357,
+        "y": 293.82632627209546
+      },
+      "caption": "",
+      "labels": [
+        "SystemPrompt"
+      ],
+      "properties": {
+        "id": "sp1",
+        "name": "Cypher Generation Sys Prompt",
+        "content": "You are a professional Graph Analyst..."
+      },
+      "style": {
+        "node-color": "#194d33",
+        "outside-position": "bottom"
       }
     },
     {
       "id": "n2",
       "position": {
-        "x": 464.9361494606697,
-        "y": 252.31464987722507
+        "x": 105.24309271662696,
+        "y": -30.24159031951323
       },
       "caption": "",
       "labels": [
-        "Event"
+        "UseCase"
       ],
       "properties": {
-        "id": "str | key",
-        "name": "str",
-        "description": "str"
+        "id": "uc1",
+        "name": "Cypher Generation",
+        "description": "Generate a Cypher query to gather context"
       },
       "style": {
-        "node-color": "#16a5a5"
+        "node-color": "#653294"
       }
     }
   ],
   "relationships": [
     {
-      "id": "n1",
-      "fromId": "n0",
-      "toId": "n2",
-      "type": "ATTENDED",
+      "id": "n0",
+      "fromId": "n2",
+      "toId": "n1",
+      "type": "HAS_SYSTEM_PROMPT",
       "properties": {},
-      "style": {
-        "detail-orientation": "horizontal"
-      }
+      "style": {}
     },
     {
-      "id": "n2",
-      "type": "HAS_FRIEND",
-      "style": {
-        "attachment-start": "right",
-        "attachment-end": "bottom"
-      },
+      "id": "n1",
+      "fromId": "n2",
+      "toId": "n0",
+      "type": "HAS_USER_PROMPT",
       "properties": {},
-      "fromId": "n0",
-      "toId": "n0"
+      "style": {}
     }
   ]
 }

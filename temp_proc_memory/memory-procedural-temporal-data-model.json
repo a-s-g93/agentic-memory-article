@@ -1,0 +1,240 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "inline",
+    "detail-orientation": "horizontal",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": -389.7550000273736,
+        "y": -30.24159031951323
+      },
+      "caption": "",
+      "labels": [
+        "UserPrompt"
+      ],
+      "properties": {
+        "id": "str | key",
+        "name": "str"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 600.2411854606275,
+        "y": -30.24159031951323
+      },
+      "caption": "",
+      "labels": [
+        "SystemPrompt"
+      ],
+      "properties": {
+        "id": "str | key",
+        "name": "str"
+      },
+      "style": {
+        "node-color": "#194d33",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 105.24309271662696,
+        "y": -30.24159031951323
+      },
+      "caption": "",
+      "labels": [
+        "UseCase"
+      ],
+      "properties": {
+        "id": "str | key",
+        "name": "str"
+      },
+      "style": {
+        "node-color": "#653294"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": -222.8822300959184,
+        "y": 220.8773146758293
+      },
+      "caption": "",
+      "labels": [
+        "UserPromptDetails"
+      ],
+      "properties": {
+        "id": "str | key",
+        "content": "str",
+        "parameters": "list<str>",
+        "version": "int",
+        "createDatetime": "datetime"
+      },
+      "style": {
+        "node-color": "#009ce0",
+        "outside-position": "left"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 105.24309271662696,
+        "y": 220.8773146758292
+      },
+      "caption": "",
+      "labels": [
+        "UseCaseDescription"
+      ],
+      "properties": {
+        "id": "str | key",
+        "description": "str",
+        "version": "int",
+        "createDatetime": "datetime"
+      },
+      "style": {
+        "node-color": "#7b64ff"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 455.2576180629626,
+        "y": 220.8773146758293
+      },
+      "caption": "",
+      "labels": [
+        "SystemPromptDetails"
+      ],
+      "properties": {
+        "id": "str | key",
+        "content": "str",
+        "version": "int",
+        "createDatetime": "datetime"
+      },
+      "style": {
+        "node-color": "#68bc00",
+        "outside-position": "right"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n2",
+      "toId": "n1",
+      "type": "HAS_SYSTEM_PROMPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n2",
+      "toId": "n0",
+      "type": "HAS_USER_PROMPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "fromId": "n0",
+      "toId": "n3",
+      "type": "HAS_CURRENT_DETAILS",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "fromId": "n2",
+      "toId": "n4",
+      "type": "HAS_CURRENT_DESCRIPTION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "fromId": "n1",
+      "toId": "n5",
+      "type": "HAS_CURRENT_DETAILS",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "type": "PREVIOUS",
+      "style": {
+        "attachment-start": "right",
+        "attachment-end": "bottom"
+      },
+      "properties": {},
+      "fromId": "n3",
+      "toId": "n3"
+    },
+    {
+      "id": "n6",
+      "type": "PREVIOUS",
+      "style": {
+        "attachment-start": "left",
+        "attachment-end": "bottom"
+      },
+      "properties": {},
+      "fromId": "n5",
+      "toId": "n5"
+    }
+  ]
+}

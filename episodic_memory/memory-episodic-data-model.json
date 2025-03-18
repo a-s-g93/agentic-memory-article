@@ -54,66 +54,50 @@
   },
   "nodes": [
     {
-      "id": "n0",
+      "id": "n3",
       "position": {
-        "x": 75,
-        "y": 252.31464987722507
+        "x": 112.5,
+        "y": 479.62929975445013
       },
       "caption": "",
       "labels": [
-        "User"
+        "CypherQuery"
       ],
       "properties": {
         "id": "str | key",
         "name": "str",
-        "age": "int",
-        "description": "str"
+        "statement": "str"
       },
-      "style": {
-        "node-color": "#aea1ff"
-      }
+      "style": {}
     },
     {
-      "id": "n2",
+      "id": "n5",
       "position": {
-        "x": 464.9361494606697,
-        "y": 252.31464987722507
+        "x": 563.1906523482845,
+        "y": 479.62929975445013
       },
       "caption": "",
       "labels": [
-        "Event"
+        "Question"
       ],
       "properties": {
         "id": "str | key",
-        "name": "str",
-        "description": "str"
+        "question": "str",
+        "embedding": "list<float>"
       },
       "style": {
-        "node-color": "#16a5a5"
+        "node-color": "#73d8ff"
       }
     }
   ],
   "relationships": [
     {
-      "id": "n1",
-      "fromId": "n0",
-      "toId": "n2",
-      "type": "ATTENDED",
+      "id": "n4",
+      "fromId": "n3",
+      "toId": "n5",
+      "type": "HAS_QUESTION",
       "properties": {},
-      "style": {
-        "detail-orientation": "horizontal"
-      }
-    },
-    {
-      "id": "n2",
-      "type": "HAS_FRIEND",
-      "style": {
-        "attachment-start": "right",
-        "attachment-end": "bottom"
-      },
-      "properties": {},
-      "fromId": "n0",
-      "toId": "n0"
+      "style": {}
     }
   ]
 }
